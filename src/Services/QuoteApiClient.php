@@ -111,7 +111,7 @@ class QuoteApiClient
    */
   protected function checkRateLimit(): void
   {
-    $now = time();
+    $now = now()->timestamp;
 
     // Resetear si la ventana ha expirado
     if ($this->windowStartTime === null || ($now > $this->windowStartTime + $this->windowSeconds)) {
