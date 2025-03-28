@@ -1,10 +1,10 @@
 <?php
 
-namespace YourVendor\QuotesPackage\Http\Controllers;
+namespace Cdft\QuotesPackage\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
-use YourVendor\QuotesPackage\Services\QuoteApiClient;
+use Cdft\QuotesPackage\Services\QuoteApiClient;
 use Exception;
 
 class QuoteApiController extends Controller

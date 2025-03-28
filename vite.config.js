@@ -15,9 +15,7 @@ export default defineConfig({
         "resources/js/app.js",
         "resources/css/app.css",
       ],
-      // Directorio público RAÍZ relativo al paquete
       publicDirectory: "public",
-      // Subdirectorio DENTRO de publicDirectory donde se construirá todo
       buildDirectory: "vendor/laravel-quotes-package",
       refresh: true,
     }),
@@ -36,10 +34,9 @@ export default defineConfig({
   //     }
   // },
   build: {
-    // outDir debe coincidir con publicDirectory + buildDirectory
     outDir: "public/vendor/laravel-quotes-package",
+    manifest: "manifest.json",
     emptyOutDir: true,
-    manifest: true,
     rollupOptions: {
       input: {
         app: path.resolve(__dirname, "resources/js/app.js"),
