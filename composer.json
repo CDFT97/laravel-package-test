@@ -1,0 +1,44 @@
+{
+  "name": "cdft/laravel-quotes-package",
+  "description": "A Laravel package to fetch quotes from dummyjson.com with rate limiting, caching, and a Vue UI.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cesar Febres",
+      "email": "febrescesar7@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^10.0 || ^11.0",
+    "illuminate/http": "^10.0 || ^11.0",
+    "illuminate/routing": "^10.0 || ^11.0",
+    "illuminate/view": "^10.0 || ^11.0",
+    "illuminate/console": "^10.0 || ^11.0",
+    "illuminate/cache": "^10.0 || ^11.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0 || ^9.0",
+    "phpunit/phpunit": "^10.0 || ^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cdft\\QuotesPackage\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Cdft\\QuotesPackage\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Cdft\\QuotesPackage\\Providers\\QuotesServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
